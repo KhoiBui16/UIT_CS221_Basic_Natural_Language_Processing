@@ -1,0 +1,146 @@
+2025-10-16 13:06:00 - [INFO] - Logger cho 'MoritzLaurer_DeBERTa-v3-large-mnli-fever-anli-ling-wanli-training' đã được khởi tạo. File log: logs/MoritzLaurer_DeBERTa-v3-large-mnli-fever-anli-ling-wanli-training/2025-10-16_13-06-00.log
+2025-10-16 13:06:00 - [INFO] - Logger initialized for MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli
+2025-10-16 13:06:00 - [INFO] - ============================================================
+2025-10-16 13:06:00 - [INFO] - 🚀 STARTING TRAINING SESSION
+2025-10-16 13:06:00 - [INFO] - ============================================================
+2025-10-16 13:06:00 - [INFO] - ROOT_DIR: /home/guest/Projects/CS221
+2025-10-16 13:06:00 - [INFO] - DATA_DIR: /home/guest/Projects/CS221/data
+2025-10-16 13:06:00 - [INFO] - TRAIN_FILE: /home/guest/Projects/CS221/data/vihallu-train.csv
+2025-10-16 13:06:00 - [INFO] - TEST_FILE: /home/guest/Projects/CS221/data/vihallu-public-test.csv
+2025-10-16 13:06:00 - [INFO] - SUBMISSION_DIR: /home/guest/Projects/CS221/submission
+2025-10-16 13:06:00 - [INFO] - SUBMISSION_CSV: submit.csv
+2025-10-16 13:06:00 - [INFO] - SUBMISSION_ZIP: submit.zip
+2025-10-16 13:06:00 - [INFO] - MODEL_NAME: MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli
+2025-10-16 13:06:00 - [INFO] - MODEL_OUTPUT_DIR: /home/guest/Projects/CS221/models/DeBERTa-v3-large-mnli-fever-anli-ling-wanli-tuned
+2025-10-16 13:06:00 - [INFO] - MAX_LENGTH: 512
+2025-10-16 13:06:00 - [INFO] - RANDOM_STATE: 42
+2025-10-16 13:06:00 - [INFO] - EPOCHS: 10
+2025-10-16 13:06:00 - [INFO] - BATCH_SIZE: 2
+2025-10-16 13:06:00 - [INFO] - GRADIENT_ACCUMULATION_STEPS: 8
+2025-10-16 13:06:00 - [INFO] - LEARNING_RATE: 6e-06
+2025-10-16 13:06:00 - [INFO] - WEIGHT_DECAY: 0.04
+2025-10-16 13:06:00 - [INFO] - CLASSIFIER_DROPOUT: 0.02
+2025-10-16 13:06:00 - [INFO] - EPSILON: 1e-08
+2025-10-16 13:06:00 - [INFO] - PATIENCE_LIMIT: 2
+2025-10-16 13:06:00 - [INFO] - TOTAL_STEP_SCALE: 0.1
+2025-10-16 13:06:00 - [INFO] - LABEL_SMOOTHING: 0.05
+2025-10-16 13:06:00 - [INFO] - VALIDATION_SPLIT_SIZE: 0.2
+2025-10-16 13:06:00 - [INFO] - LABEL_MAP: {'intrinsic': 0, 'extrinsic': 1, 'no': 2}
+2025-10-16 13:06:00 - [INFO] - ID2LABEL: {0: 'intrinsic', 1: 'extrinsic', 2: 'no'}
+2025-10-16 13:06:00 - [INFO] - CLASS_WEIGHTS: [1.0393466963622866, 1.0114145354717525, 0.9531590413943355]
+2025-10-16 13:06:00 - [INFO] - ============================================================
+2025-10-16 13:06:02 - [INFO] - Bắt đầu pipeline huấn luyện.
+2025-10-16 13:06:02 - [INFO] - Bước 1: Chuẩn bị dữ liệu...
+2025-10-16 13:06:02 - [INFO] - Chia dữ liệu: 5600 mẫu train, 1400 mẫu validation.
+2025-10-16 13:06:03 - [INFO] - Bước 2: Tải model 'MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli' và tokenizer...
+2025-10-16 13:06:08 - [INFO] - Bước 3: Tạo Dataset và DataLoader...
+2025-10-16 13:06:08 - [INFO] - Gradient accumulation steps: 8 | Effective batch size: 16
+2025-10-16 13:06:08 - [INFO] - Bước 4: Thiết lập môi trường huấn luyện...
+2025-10-16 13:06:08 - [INFO] - Scheduler will run for 3500 total steps (350 per epoch)
+2025-10-16 13:06:08 - [INFO] - Warmup steps: 350
+2025-10-16 13:06:08 - [INFO] - Sử dụng Class Weights cho hàm loss.
+2025-10-16 13:06:08 - [INFO] - --- Epoch 1/10 ---
+2025-10-16 13:14:42 - [INFO] - Loss trung bình trên tập train: 1.0154
+2025-10-16 13:14:42 - [INFO] - Current Learning Rate: 6.00e-06
+2025-10-16 13:14:42 - [INFO] - Bắt đầu đánh giá trên tập validation...
+2025-10-16 13:15:27 - [INFO] - Validation Loss: 0.8925
+2025-10-16 13:15:27 - [INFO] - Validation Accuracy: 0.6493
+2025-10-16 13:15:27 - [INFO] - Validation Macro-F1: 0.6474
+2025-10-16 13:15:27 - [INFO] - Classification Report trên tập validation:
+              precision    recall  f1-score   support
+
+   intrinsic     0.6921    0.4633    0.5550       490
+   extrinsic     0.5438    0.8612    0.6667       461
+          no     0.8333    0.6347    0.7206       449
+
+    accuracy                         0.6493      1400
+   macro avg     0.6897    0.6531    0.6474      1400
+weighted avg     0.6886    0.6493    0.6449      1400
+
+2025-10-16 13:15:27 - [INFO] - 🎉 Macro-F1 cải thiện. Đang lưu model tốt nhất vào '/home/guest/Projects/CS221/models/DeBERTa-v3-large-mnli-fever-anli-ling-wanli-tuned'...
+2025-10-16 13:15:28 - [INFO] - Lưu model thành công.
+2025-10-16 13:15:28 - [INFO] - --- Epoch 2/10 ---
+2025-10-16 13:23:40 - [INFO] - Loss trung bình trên tập train: 0.6161
+2025-10-16 13:23:40 - [INFO] - Current Learning Rate: 5.82e-06
+2025-10-16 13:23:40 - [INFO] - Bắt đầu đánh giá trên tập validation...
+2025-10-16 13:24:25 - [INFO] - Validation Loss: 0.6902
+2025-10-16 13:24:25 - [INFO] - Validation Accuracy: 0.7593
+2025-10-16 13:24:25 - [INFO] - Validation Macro-F1: 0.7596
+2025-10-16 13:24:25 - [INFO] - Classification Report trên tập validation:
+              precision    recall  f1-score   support
+
+   intrinsic     0.7306    0.7857    0.7571       490
+   extrinsic     0.7265    0.7896    0.7568       461
+          no     0.8441    0.6993    0.7649       449
+
+    accuracy                         0.7593      1400
+   macro avg     0.7671    0.7582    0.7596      1400
+weighted avg     0.7656    0.7593    0.7595      1400
+
+2025-10-16 13:24:25 - [INFO] - 🎉 Macro-F1 cải thiện. Đang lưu model tốt nhất vào '/home/guest/Projects/CS221/models/DeBERTa-v3-large-mnli-fever-anli-ling-wanli-tuned'...
+2025-10-16 13:24:26 - [INFO] - Lưu model thành công.
+2025-10-16 13:24:26 - [INFO] - --- Epoch 3/10 ---
+2025-10-16 13:32:39 - [INFO] - Loss trung bình trên tập train: 0.4301
+2025-10-16 13:32:39 - [INFO] - Current Learning Rate: 5.30e-06
+2025-10-16 13:32:39 - [INFO] - Bắt đầu đánh giá trên tập validation...
+2025-10-16 13:33:23 - [INFO] - Validation Loss: 0.7000
+2025-10-16 13:33:23 - [INFO] - Validation Accuracy: 0.7564
+2025-10-16 13:33:23 - [INFO] - Validation Macro-F1: 0.7547
+2025-10-16 13:33:23 - [INFO] - Classification Report trên tập validation:
+              precision    recall  f1-score   support
+
+   intrinsic     0.8119    0.6694    0.7338       490
+   extrinsic     0.7658    0.7093    0.7365       461
+          no     0.7100    0.8998    0.7937       449
+
+    accuracy                         0.7564      1400
+   macro avg     0.7626    0.7595    0.7547      1400
+weighted avg     0.7640    0.7564    0.7539      1400
+
+2025-10-16 13:33:23 - [WARNING] - Macro-F1 không cải thiện. Patience: 1/2
+2025-10-16 13:33:23 - [INFO] - --- Epoch 4/10 ---
+2025-10-16 13:41:40 - [INFO] - Loss trung bình trên tập train: 0.2697
+2025-10-16 13:41:40 - [INFO] - Current Learning Rate: 4.50e-06
+2025-10-16 13:41:40 - [INFO] - Bắt đầu đánh giá trên tập validation...
+2025-10-16 13:42:25 - [INFO] - Validation Loss: 0.8313
+2025-10-16 13:42:25 - [INFO] - Validation Accuracy: 0.7607
+2025-10-16 13:42:25 - [INFO] - Validation Macro-F1: 0.7612
+2025-10-16 13:42:25 - [INFO] - Classification Report trên tập validation:
+              precision    recall  f1-score   support
+
+   intrinsic     0.7374    0.7735    0.7550       490
+   extrinsic     0.7422    0.7245    0.7333       461
+          no     0.8073    0.7840    0.7955       449
+
+    accuracy                         0.7607      1400
+   macro avg     0.7623    0.7606    0.7612      1400
+weighted avg     0.7614    0.7607    0.7608      1400
+
+2025-10-16 13:42:25 - [INFO] - 🎉 Macro-F1 cải thiện. Đang lưu model tốt nhất vào '/home/guest/Projects/CS221/models/DeBERTa-v3-large-mnli-fever-anli-ling-wanli-tuned'...
+2025-10-16 13:42:27 - [INFO] - Lưu model thành công.
+2025-10-16 13:42:27 - [INFO] - --- Epoch 5/10 ---
+2025-10-16 13:50:48 - [INFO] - Loss trung bình trên tập train: 0.1560
+2025-10-16 13:50:48 - [INFO] - Current Learning Rate: 3.52e-06
+2025-10-16 13:50:48 - [INFO] - Bắt đầu đánh giá trên tập validation...
+2025-10-16 13:51:34 - [INFO] - Validation Loss: 1.4152
+2025-10-16 13:51:34 - [INFO] - Validation Accuracy: 0.7386
+2025-10-16 13:51:34 - [INFO] - Validation Macro-F1: 0.7381
+2025-10-16 13:51:34 - [INFO] - Classification Report trên tập validation:
+              precision    recall  f1-score   support
+
+   intrinsic     0.7852    0.6714    0.7239       490
+   extrinsic     0.7019    0.7202    0.7109       461
+          no     0.7343    0.8307    0.7795       449
+
+    accuracy                         0.7386      1400
+   macro avg     0.7405    0.7408    0.7381      1400
+weighted avg     0.7414    0.7386    0.7375      1400
+
+2025-10-16 13:51:34 - [WARNING] - Macro-F1 không cải thiện. Patience: 1/2
+2025-10-16 13:51:34 - [INFO] - --- Epoch 6/10 ---
+2025-10-16 13:51:50 - [INFO] - 🏁 Quá trình huấn luyện hoàn tất.
+2025-10-16 13:51:50 - [INFO] - Model tốt nhất với Macro-F1 = 0.7612 đã được lưu tại '/home/guest/Projects/CS221/models/DeBERTa-v3-large-mnli-fever-anli-ling-wanli-tuned'2025-10-16 13:56:43 - [INFO] - Phân phối kết quả trên từng lớp:
+  true_label  correct  incorrect  total correct_rate incorrect_rate
+0  extrinsic      332        129    461       72.02%         27.98%
+1  intrinsic      329        161    490       67.14%         32.86%
+2         no      373         76    449       83.07%         16.93%

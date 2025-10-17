@@ -1,0 +1,90 @@
+2025-10-16 21:23:59 - [INFO] - Logger cho 'uitnlp_CafeBERT-training' đã được khởi tạo. File log: logs/uitnlp_CafeBERT-training/2025-10-16_21-23-59.log
+2025-10-16 21:23:59 - [INFO] - Logger initialized for uitnlp/CafeBERT
+2025-10-16 21:23:59 - [INFO] - ============================================================
+2025-10-16 21:23:59 - [INFO] - 🚀 STARTING TRAINING SESSION
+2025-10-16 21:23:59 - [INFO] - ============================================================
+2025-10-16 21:23:59 - [INFO] - ROOT_DIR: /home/guest/Projects/CS221
+2025-10-16 21:23:59 - [INFO] - DATA_DIR: /home/guest/Projects/CS221/data
+2025-10-16 21:23:59 - [INFO] - TRAIN_FILE: /home/guest/Projects/CS221/data/vihallu-train.csv
+2025-10-16 21:23:59 - [INFO] - TEST_FILE: /home/guest/Projects/CS221/data/vihallu-public-test.csv
+2025-10-16 21:23:59 - [INFO] - SUBMISSION_DIR: /home/guest/Projects/CS221/submission
+2025-10-16 21:23:59 - [INFO] - SUBMISSION_CSV: submit.csv
+2025-10-16 21:23:59 - [INFO] - SUBMISSION_ZIP: submit.zip
+2025-10-16 21:23:59 - [INFO] - MODEL_NAME: uitnlp/CafeBERT
+2025-10-16 21:23:59 - [INFO] - MODEL_OUTPUT_DIR: /home/guest/Projects/CS221/models/CafeBERT-tuned
+2025-10-16 21:23:59 - [INFO] - MAX_LENGTH: 512
+2025-10-16 21:23:59 - [INFO] - RANDOM_STATE: 42
+2025-10-16 21:23:59 - [INFO] - EPOCHS: 10
+2025-10-16 21:23:59 - [INFO] - BATCH_SIZE: 1
+2025-10-16 21:23:59 - [INFO] - GRADIENT_ACCUMULATION_STEPS: 16
+2025-10-16 21:23:59 - [INFO] - SCHEDULER_TYPE: cosine
+2025-10-16 21:23:59 - [INFO] - LEARNING_RATE: 1e-05
+2025-10-16 21:23:59 - [INFO] - WEIGHT_DECAY: 0.02
+2025-10-16 21:23:59 - [INFO] - CLASSIFIER_DROPOUT: 0.05
+2025-10-16 21:23:59 - [INFO] - EPSILON: 1e-08
+2025-10-16 21:23:59 - [INFO] - PATIENCE_LIMIT: 2
+2025-10-16 21:23:59 - [INFO] - TOTAL_STEP_SCALE: 0.1
+2025-10-16 21:23:59 - [INFO] - LABEL_SMOOTHING: 0.05
+2025-10-16 21:23:59 - [INFO] - VALIDATION_SPLIT_SIZE: 0.2
+2025-10-16 21:23:59 - [INFO] - LABEL_MAP: {'intrinsic': 0, 'extrinsic': 1, 'no': 2}
+2025-10-16 21:23:59 - [INFO] - ID2LABEL: {0: 'intrinsic', 1: 'extrinsic', 2: 'no'}
+2025-10-16 21:23:59 - [INFO] - CLASS_WEIGHTS: [1.0393466963622866, 1.0114145354717525, 0.9531590413943355]
+2025-10-16 21:23:59 - [INFO] - ============================================================
+2025-10-16 21:24:01 - [INFO] - Bắt đầu pipeline huấn luyện PET.
+2025-10-16 21:24:01 - [INFO] - Bước 1: Chuẩn bị dữ liệu...
+2025-10-16 21:24:02 - [INFO] - Chia dữ liệu: 5600 mẫu train, 1400 mẫu validation.
+2025-10-16 21:24:02 - [INFO] - Bước 2: Tải model 'uitnlp/CafeBERT' và tokenizer...
+2025-10-16 21:24:04 - [INFO] - Thiết lập các thành phần cho PET...
+2025-10-16 21:24:04 - [INFO] - Sử dụng Pattern (đã sửa lỗi): {mask}! Dựa trên thông tin: "{premise}", câu trả lời "{hypothesis}" có đúng không?
+2025-10-16 21:24:04 - [INFO] - Sử dụng Verbalizer: {2: 'chuẩn', 0: 'sai', 1: 'khác'}
+2025-10-16 21:24:04 - [INFO] - ✅ Từ 'chuẩn' (ID: 3) là token đơn lẻ.
+2025-10-16 21:24:04 - [INFO] - ✅ Từ 'sai' (ID: 27305) là token đơn lẻ.
+2025-10-16 21:24:04 - [INFO] - ✅ Từ 'khác' (ID: 3) là token đơn lẻ.
+2025-10-16 21:24:04 - [INFO] - Bước 3: Tạo Dataset và DataLoader...
+2025-10-16 21:24:04 - [INFO] - ✅ Tạo DataLoader thành công với DataCollatorWithPadding chuẩn!
+2025-10-16 21:24:04 - [INFO] - Bước 4: Thiết lập optimizer, scheduler và loss function...
+2025-10-16 21:24:04 - [INFO] - Scheduler sẽ chạy trong 3500 bước (350 bước/epoch)
+2025-10-16 21:24:04 - [INFO] - Warmup steps: 350
+2025-10-16 21:24:04 - [INFO] - Sử dụng Class Weights & Label smoothing cho hàm loss.
+2025-10-16 21:24:04 - [INFO] - Bước 5: Bắt đầu vòng lặp huấn luyện...
+2025-10-16 21:24:04 - [INFO] - --- Epoch 1/10 ---
+2025-10-16 21:32:09 - [INFO] - Loss trung bình trên tập train: 1.1587
+2025-10-16 21:32:09 - [INFO] - Current Learning Rate: 1.00e-05
+2025-10-16 21:32:09 - [INFO] - Bắt đầu đánh giá trên tập validation...
+2025-10-16 21:32:46 - [INFO] - Validation Loss: 1.1176
+2025-10-16 21:32:46 - [INFO] - Validation Accuracy: 0.3293
+2025-10-16 21:32:46 - [INFO] - Validation Macro-F1: 0.1651
+2025-10-16 21:32:46 - [INFO] - Classification Report trên tập validation:
+              precision    recall  f1-score   support
+
+   intrinsic     0.0000    0.0000    0.0000       490
+   extrinsic     0.3293    1.0000    0.4954       461
+          no     0.0000    0.0000    0.0000       449
+
+    accuracy                         0.3293      1400
+   macro avg     0.1098    0.3333    0.1651      1400
+weighted avg     0.1084    0.3293    0.1631      1400
+
+2025-10-16 21:32:46 - [INFO] - 🎉 Macro-F1 cải thiện. Đang lưu model tốt nhất vào '/home/guest/Projects/CS221/models/CafeBERT-tuned'...
+2025-10-16 21:32:49 - [INFO] - Lưu model thành công.
+2025-10-16 21:32:49 - [INFO] - --- Epoch 2/10 ---
+2025-10-16 21:40:48 - [INFO] - Loss trung bình trên tập train: 1.1394
+2025-10-16 21:40:48 - [INFO] - Current Learning Rate: 9.70e-06
+2025-10-16 21:40:48 - [INFO] - Bắt đầu đánh giá trên tập validation...
+2025-10-16 21:41:25 - [INFO] - Validation Loss: 0.9749
+2025-10-16 21:41:25 - [INFO] - Validation Accuracy: 0.4800
+2025-10-16 21:41:25 - [INFO] - Validation Macro-F1: 0.3805
+2025-10-16 21:41:25 - [INFO] - Classification Report trên tập validation:
+              precision    recall  f1-score   support
+
+   intrinsic     0.5630    0.8020    0.6616       490
+   extrinsic     0.3974    0.6052    0.4798       461
+          no     0.0000    0.0000    0.0000       449
+
+    accuracy                         0.4800      1400
+   macro avg     0.3202    0.4691    0.3805      1400
+weighted avg     0.3279    0.4800    0.3896      1400
+
+2025-10-16 21:41:25 - [INFO] - 🎉 Macro-F1 cải thiện. Đang lưu model tốt nhất vào '/home/guest/Projects/CS221/models/CafeBERT-tuned'...
+2025-10-16 21:41:28 - [INFO] - Lưu model thành công.
+2025-10-16 21:41:28 - [INFO] - --- Epoch 3/10 ---

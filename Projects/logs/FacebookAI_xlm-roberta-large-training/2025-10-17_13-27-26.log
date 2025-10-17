@@ -1,0 +1,184 @@
+2025-10-17 13:27:26 - [INFO] - Logger cho 'FacebookAI_xlm-roberta-large-training' đã được khởi tạo. File log: logs/FacebookAI_xlm-roberta-large-training/2025-10-17_13-27-26.log
+2025-10-17 13:27:26 - [INFO] - Logger initialized for FacebookAI/xlm-roberta-large
+2025-10-17 13:27:26 - [INFO] - ============================================================
+2025-10-17 13:27:26 - [INFO] - 🚀 STARTING TRAINING SESSION
+2025-10-17 13:27:26 - [INFO] - ============================================================
+2025-10-17 13:27:26 - [INFO] - ROOT_DIR: /home/guest/Projects/CS221
+2025-10-17 13:27:26 - [INFO] - DATA_DIR: /home/guest/Projects/CS221/data
+2025-10-17 13:27:26 - [INFO] - TRAIN_FILE: /home/guest/Projects/CS221/data/vihallu-train.csv
+2025-10-17 13:27:26 - [INFO] - TEST_FILE: /home/guest/Projects/CS221/data/vihallu-public-test.csv
+2025-10-17 13:27:26 - [INFO] - SUBMISSION_DIR: /home/guest/Projects/CS221/submission
+2025-10-17 13:27:26 - [INFO] - SUBMISSION_CSV: submit.csv
+2025-10-17 13:27:26 - [INFO] - SUBMISSION_ZIP: submit.zip
+2025-10-17 13:27:26 - [INFO] - MODEL_NAME: FacebookAI/xlm-roberta-large
+2025-10-17 13:27:26 - [INFO] - MODEL_OUTPUT_DIR: /home/guest/Projects/CS221/models/xlm-roberta-large-tuned
+2025-10-17 13:27:26 - [INFO] - MAX_LENGTH: 512
+2025-10-17 13:27:26 - [INFO] - RANDOM_STATE: 42
+2025-10-17 13:27:26 - [INFO] - EPOCHS: 10
+2025-10-17 13:27:26 - [INFO] - BATCH_SIZE: 4
+2025-10-17 13:27:26 - [INFO] - GRADIENT_ACCUMULATION_STEPS: 4
+2025-10-17 13:27:26 - [INFO] - SCHEDULER_TYPE: cosine
+2025-10-17 13:27:26 - [INFO] - LEARNING_RATE: 8e-06
+2025-10-17 13:27:26 - [INFO] - WEIGHT_DECAY: 0.05
+2025-10-17 13:27:26 - [INFO] - NUM_CYCLES: 3
+2025-10-17 13:27:26 - [INFO] - CLASSIFIER_DROPOUT: 0.5
+2025-10-17 13:27:26 - [INFO] - LABEL_SMOOTHING: 0.05
+2025-10-17 13:27:26 - [INFO] - TOTAL_STEP_SCALE: 0.1
+2025-10-17 13:27:26 - [INFO] - EPSILON: 1e-08
+2025-10-17 13:27:26 - [INFO] - PATIENCE_LIMIT: 3
+2025-10-17 13:27:26 - [INFO] - VALIDATION_SPLIT_SIZE: 0.2
+2025-10-17 13:27:26 - [INFO] - LABEL_MAP: {'no': 0, 'extrinsic': 1, 'intrinsic': 2}
+2025-10-17 13:27:26 - [INFO] - ID2LABEL: {0: 'no', 1: 'extrinsic', 2: 'intrinsic'}
+2025-10-17 13:27:26 - [INFO] - CLASS_WEIGHTS: [1.0393466963622866, 1.0114145354717525, 0.9531590413943355]
+2025-10-17 13:27:26 - [INFO] - ============================================================
+2025-10-17 13:27:29 - [INFO] - Bắt đầu pipeline huấn luyện.
+2025-10-17 13:27:29 - [INFO] - Bước 1: Chuẩn bị dữ liệu...
+2025-10-17 13:27:29 - [INFO] - Chia dữ liệu: 5600 mẫu train, 1400 mẫu validation.
+2025-10-17 13:27:29 - [INFO] - Bước 2: Tải model 'FacebookAI/xlm-roberta-large' và tokenizer...
+2025-10-17 13:27:31 - [INFO] - Phân tích kiến trúc mô hình bằng torchinfo...
+2025-10-17 13:27:34 - [INFO] - Kiến trúc chi tiết của mô hình:
+=====================================================================================================================================================================
+Layer (type:depth-idx)                                            Input Shape               Output Shape              Param #                   Mult-Adds
+=====================================================================================================================================================================
+XLMRobertaForSequenceClassification                               --                        [4, 3]                    --                        --
+├─XLMRobertaModel: 1-1                                            [4, 512]                  [4, 512, 1024]            --                        --
+│    └─XLMRobertaEmbeddings: 2-1                                  --                        [4, 512, 1024]            --                        --
+│    │    └─Embedding: 3-1                                        [4, 512]                  [4, 512, 1024]            256,002,048               1,024,008,192
+│    │    └─Embedding: 3-2                                        [4, 512]                  [4, 512, 1024]            1,024                     4,096
+│    │    └─Embedding: 3-3                                        [4, 512]                  [4, 512, 1024]            526,336                   2,105,344
+│    │    └─LayerNorm: 3-4                                        [4, 512, 1024]            [4, 512, 1024]            2,048                     8,192
+│    │    └─Dropout: 3-5                                          [4, 512, 1024]            [4, 512, 1024]            --                        --
+│    └─XLMRobertaEncoder: 2-2                                     [4, 512, 1024]            [4, 512, 1024]            --                        --
+│    │    └─ModuleList: 3-6                                       --                        --                        302,309,376               --
+├─XLMRobertaClassificationHead: 1-2                               [4, 512, 1024]            [4, 3]                    --                        --
+│    └─Dropout: 2-3                                               [4, 1024]                 [4, 1024]                 --                        --
+│    └─Linear: 2-4                                                [4, 1024]                 [4, 1024]                 1,049,600                 4,198,400
+│    └─Dropout: 2-5                                               [4, 1024]                 [4, 1024]                 --                        --
+│    └─Linear: 2-6                                                [4, 1024]                 [4, 3]                    3,075                     12,300
+=====================================================================================================================================================================
+Total params: 559,893,507
+Trainable params: 559,893,507
+Non-trainable params: 0
+Total mult-adds (Units.GIGABYTES): 2.24
+=====================================================================================================================================================================
+Input size (MB): 0.02
+Forward/backward pass size (MB): 4496.33
+Params size (MB): 2239.57
+Estimated Total Size (MB): 6735.92
+=====================================================================================================================================================================
+2025-10-17 13:27:34 - [INFO] - Bước 3: Tạo Dataset và DataLoader...
+2025-10-17 13:27:34 - [INFO] - ✅ Tạo DataLoader thành công với DataCollatorWithPadding chuẩn!
+2025-10-17 13:27:34 - [INFO] - Gradient accumulation steps: 4 | Effective batch size: 16
+2025-10-17 13:27:34 - [INFO] - Bước 4: Thiết lập môi trường huấn luyện và kiến trúc model...
+2025-10-17 13:27:34 - [INFO] - Sử dụng thiết bị: cuda
+2025-10-17 13:27:34 - [INFO] - ✅ Tìm thấy 1 GPU(s).
+2025-10-17 13:27:34 - [INFO] - ✅ Đang sử dụng GPU: NVIDIA GeForce RTX 5070 Ti
+2025-10-17 13:27:34 - [INFO] - Kiến trúc của mô hình:
+XLMRobertaForSequenceClassification(
+  (roberta): XLMRobertaModel(
+    (embeddings): XLMRobertaEmbeddings(
+      (word_embeddings): Embedding(250002, 1024, padding_idx=1)
+      (position_embeddings): Embedding(514, 1024, padding_idx=1)
+      (token_type_embeddings): Embedding(1, 1024)
+      (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+      (dropout): Dropout(p=0.5, inplace=False)
+    )
+    (encoder): XLMRobertaEncoder(
+      (layer): ModuleList(
+        (0-23): 24 x XLMRobertaLayer(
+          (attention): XLMRobertaAttention(
+            (self): XLMRobertaSdpaSelfAttention(
+              (query): Linear(in_features=1024, out_features=1024, bias=True)
+              (key): Linear(in_features=1024, out_features=1024, bias=True)
+              (value): Linear(in_features=1024, out_features=1024, bias=True)
+              (dropout): Dropout(p=0.5, inplace=False)
+            )
+            (output): XLMRobertaSelfOutput(
+              (dense): Linear(in_features=1024, out_features=1024, bias=True)
+              (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+              (dropout): Dropout(p=0.5, inplace=False)
+            )
+          )
+          (intermediate): XLMRobertaIntermediate(
+            (dense): Linear(in_features=1024, out_features=4096, bias=True)
+            (intermediate_act_fn): GELUActivation()
+          )
+          (output): XLMRobertaOutput(
+            (dense): Linear(in_features=4096, out_features=1024, bias=True)
+            (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+            (dropout): Dropout(p=0.5, inplace=False)
+          )
+        )
+      )
+    )
+  )
+  (classifier): XLMRobertaClassificationHead(
+    (dense): Linear(in_features=1024, out_features=1024, bias=True)
+    (dropout): Dropout(p=0.5, inplace=False)
+    (out_proj): Linear(in_features=1024, out_features=3, bias=True)
+  )
+)
+2025-10-17 13:27:35 - [INFO] - Scheduler will run for 3500 total steps (350 per epoch)
+2025-10-17 13:27:35 - [INFO] - Sử dụng scheduler chung: cosine
+2025-10-17 13:27:35 - [INFO] - Warmup steps: 350
+2025-10-17 13:27:35 - [INFO] - Sử dụng Class Weights & Label smoothing cho hàm loss.
+2025-10-17 13:27:35 - [INFO] - --- Epoch 1/10 ---
+2025-10-17 13:31:59 - [INFO] - Loss trung bình trên tập train: 1.1542
+2025-10-17 13:31:59 - [INFO] - Current Learning Rate: 8.00e-06
+2025-10-17 13:31:59 - [INFO] - Bắt đầu đánh giá trên tập validation...
+2025-10-17 13:32:20 - [INFO] - Validation Loss: 1.1034
+2025-10-17 13:32:20 - [INFO] - Validation Accuracy: 0.3500
+2025-10-17 13:32:20 - [INFO] - Validation Macro-F1: 0.1728
+2025-10-17 13:32:20 - [INFO] - Classification Report trên tập validation:
+              precision    recall  f1-score   support
+
+          no     0.0000    0.0000    0.0000       449
+   extrinsic     0.0000    0.0000    0.0000       461
+   intrinsic     0.3500    1.0000    0.5185       490
+
+    accuracy                         0.3500      1400
+   macro avg     0.1167    0.3333    0.1728      1400
+weighted avg     0.1225    0.3500    0.1815      1400
+
+2025-10-17 13:32:20 - [INFO] - 🎉 Macro-F1 cải thiện. Đang lưu model tốt nhất vào '/home/guest/Projects/CS221/models/xlm-roberta-large-tuned'...
+2025-10-17 13:32:22 - [INFO] - Lưu model thành công.
+2025-10-17 13:32:22 - [INFO] - --- Epoch 2/10 ---
+2025-10-17 13:36:40 - [INFO] - Loss trung bình trên tập train: 1.1529
+2025-10-17 13:36:40 - [INFO] - Current Learning Rate: 7.76e-06
+2025-10-17 13:36:40 - [INFO] - Bắt đầu đánh giá trên tập validation...
+2025-10-17 13:37:01 - [INFO] - Validation Loss: 1.0996
+2025-10-17 13:37:01 - [INFO] - Validation Accuracy: 0.3293
+2025-10-17 13:37:01 - [INFO] - Validation Macro-F1: 0.1651
+2025-10-17 13:37:01 - [INFO] - Classification Report trên tập validation:
+              precision    recall  f1-score   support
+
+          no     0.0000    0.0000    0.0000       449
+   extrinsic     0.3293    1.0000    0.4954       461
+   intrinsic     0.0000    0.0000    0.0000       490
+
+    accuracy                         0.3293      1400
+   macro avg     0.1098    0.3333    0.1651      1400
+weighted avg     0.1084    0.3293    0.1631      1400
+
+2025-10-17 13:37:01 - [WARNING] - Macro-F1 không cải thiện. Patience: 1/3
+2025-10-17 13:37:01 - [INFO] - --- Epoch 3/10 ---
+2025-10-17 13:41:23 - [INFO] - Loss trung bình trên tập train: 1.1467
+2025-10-17 13:41:23 - [INFO] - Current Learning Rate: 7.06e-06
+2025-10-17 13:41:23 - [INFO] - Bắt đầu đánh giá trên tập validation...
+2025-10-17 13:41:44 - [INFO] - Validation Loss: 1.0996
+2025-10-17 13:41:44 - [INFO] - Validation Accuracy: 0.3221
+2025-10-17 13:41:44 - [INFO] - Validation Macro-F1: 0.2059
+2025-10-17 13:41:44 - [INFO] - Classification Report trên tập validation:
+              precision    recall  f1-score   support
+
+          no     0.3212    0.9042    0.4740       449
+   extrinsic     0.0000    0.0000    0.0000       461
+   intrinsic     0.3309    0.0918    0.1438       490
+
+    accuracy                         0.3221      1400
+   macro avg     0.2174    0.3320    0.2059      1400
+weighted avg     0.2188    0.3221    0.2023      1400
+
+2025-10-17 13:41:44 - [INFO] - 🎉 Macro-F1 cải thiện. Đang lưu model tốt nhất vào '/home/guest/Projects/CS221/models/xlm-roberta-large-tuned'...
+2025-10-17 13:41:47 - [INFO] - Lưu model thành công.
+2025-10-17 13:41:47 - [INFO] - --- Epoch 4/10 ---

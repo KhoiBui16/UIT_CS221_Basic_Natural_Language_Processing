@@ -1,0 +1,4 @@
+- Đã thử qua v1-v4 khá ok, v1 tốt và v4 làm baseline (prompt tốt + quản lý tokenizer)
+
+- v5 đang dở do chưa biết cách tối ưu
+- v6, v7 chưa test thử phương pháp mới
