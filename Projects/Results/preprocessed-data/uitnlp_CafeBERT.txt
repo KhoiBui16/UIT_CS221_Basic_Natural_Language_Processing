@@ -1,0 +1,23 @@
+# --- Epoch 3/8 ---
+- Learning Rate: 2.00e-05
+- Train loss: 0.5841
+- Validation Loss: 0.6812
+- Validation Accuracy: 0.7900
+- Validation Macro-F1: 0.7909
+
+# Classification Report trên tập validation:
+              precision    recall  f1-score   support
+
+          no     0.8372    0.8036    0.8200       224
+   extrinsic     0.7667    0.7965    0.7813       231
+   intrinsic     0.7714    0.7714    0.7714       245
+
+    accuracy                         0.7900       700
+   macro avg     0.7918    0.7905    0.7909       700
+weighted avg     0.7909    0.7900    0.7902       700
+
+# Phân phối kết quả trên từng lớp:
+  true_label  correct  incorrect  total correct_rate incorrect_rate
+0  extrinsic      200         31    231       86.58%         13.42%
+1  intrinsic      128        117    245       52.24%         47.76%
+2         no      189         35    224       84.38%         15.62%
