@@ -38,7 +38,7 @@ def get_model(model_name, device_str):
     return model, tokenizer, device
 
 
-st.title("🕵️ LLMs Hallucination Classification on Vietanmese dataset")
+st.title("🕵️ LLMs Hallucination Classification on Vietnamese dataset")
 st.caption("Chạy trực tiếp mô hình trên Streamlit không qua API.")
 
 # --- SIDEBAR ---
