@@ -151,6 +151,11 @@ def run_inference(
     if "hypothesis" in df_out.columns:
         del df_out["hypothesis"]
 
+    if "label" in df_out.columns:
+        del df_out["label"]
+    if "label_id" in df_out.columns:
+        del df_out["label_id"]
+
     return df_out
 
 
