@@ -39,7 +39,7 @@ def get_model(model_name, device_str):
 
 
 st.title("🕵️ LLMs Hallucination Classification on Vietnamese dataset")
-st.caption("Chạy trực tiếp mô hình trên Streamlit không qua API.")
+# st.caption("Chạy trực tiếp mô hình trên Streamlit không qua API.")
 
 # --- MÔ TẢ DỰ ÁN ---
 st.markdown(
