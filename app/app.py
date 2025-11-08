@@ -42,9 +42,8 @@ st.title("🕵️ LLMs Hallucination Classification on Vietnamese dataset")
 # st.caption("Chạy trực tiếp mô hình trên Streamlit không qua API.")
 
 # --- MÔ TẢ DỰ ÁN ---
-st.markdown(
+st.info(
     """
-
     **Mục tiêu:** Giúp đánh giá phản hồi của các mô hình ngôn ngữ lớn (LLM) dựa trên ngữ cảnh.  
     App phân loại phản hồi thành 3 loại:
 
@@ -53,21 +52,16 @@ st.markdown(
     3. ⚠️ **EXTRINSIC** - Phản hồi bổ sung thông tin không có căn cứ hoặc không thể truy xuất từ ngữ cảnh.
 
     **2 Chế độ sử dụng (Tabs):**
-    1. **📝 Kiểm tra nhanh (Quick Test)**  
-       - Nhập trực tiếp `Context`, `Prompt` và `Response` để kiểm tra từng câu riêng lẻ.  
-       - Nhận kết quả nhãn ngay, kèm score dự đoán.
-       
-    2. **📂 Upload file CSV (Batch Processing)**  
-       - Upload CSV có các cột: `context`, `prompt`, `response`.  
-       - Kiểm tra nhiều mẫu cùng lúc.  
-       - Nhận thống kê phân bố nhãn và bảng kết quả chi tiết.
+    - 📝 **Kiểm tra nhanh (Quick Test)**: Nhập Context, Prompt, Response từng câu.  
+    - 📂 **Upload CSV (Batch Processing)**: Kiểm tra nhiều mẫu, xem thống kê và bảng chi tiết.
 
     **Hướng dẫn chung:**  
     - Chọn mô hình LLM và thiết bị (CPU/GPU) trong sidebar.  
     - Nhấn nút để chạy dự đoán.  
-    - ⚠️ Lưu ý: Một số mô hình lớn có thể mất vài phút để load lần đầu.
+    - ⚠️ Một số mô hình lớn có thể mất vài phút để load lần đầu.
     """
 )
+
 
 # --- SIDEBAR ---
 st.sidebar.header("⚙️ Cấu hình Model")
