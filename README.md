@@ -1,4 +1,5 @@
-# UIT_CS221_Basic_Natural_Language_Processing(Hallucination Classification of LLMs) 
+# Hallucination Classification of Masked LLMs
+UIT_CS221_Basic_Natural_Language_Processing
 
 ## Link fine-tuned models on HuggingFace with data preprocessing
 - [KhoiBui/CafeBERT-hallucination-classification](https://huggingface.co/KhoiBui/CafeBERT-hallucination-classification)
