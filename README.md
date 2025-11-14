@@ -50,9 +50,9 @@ How we trained: You can find the main training notebook in [notebook/train/train
 Go ahead and test the application live on Streamlit Cloud: [(https://uit-cs221-llms-hallucination-classification.streamlit.app/)](https://uit-cs221-llms-hallucination-classification.streamlit.app/)
 
 ## 🖼️ How it Looks
-- ****UI_demo**
+- **UI_demo**
 ![UI Demo](asserts/UI_demo.png)
-- **UI_result_1
+- **UI_result_1**
 ![UI Result 1](asserts/UI_result_1.png)
 - **UI_result_2**
 ![UI Result 2](asserts/UI_result_2.png)
