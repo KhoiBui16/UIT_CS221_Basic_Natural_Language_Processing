@@ -16,7 +16,7 @@
 
 * **Academic Year**: 2025-2026
 
-# YOUR INSTRUCTOR
+## OUR INSTRUCTOR
 * TS. **Nguyễn Trọng Chỉnh** - *chinhnt@uit.edu.vn*
 
 
