@@ -8,7 +8,7 @@
 <h1 align="center"><b>CS221 - Natural Language Processing</b></h1>
 
 ## COURSE INFO
-* **Course Title**:  - Natural Language Processing
+* **Course Title**:  Natural Language Processing
 
 * **Course Code**: CS221
 
