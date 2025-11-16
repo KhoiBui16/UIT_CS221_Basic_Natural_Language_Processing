@@ -24,7 +24,7 @@
 | STT    | MSSV          | Họ và Tên              | Github                                               | Email                   |
 | ------ |:-------------:| ----------------------:|-----------------------------------------------------:|-------------------------:
 | 1      | 23520761    | Bùi Nhật Anh Khôi     |[KhoiBui16](https://github.com/KhoiBui16)                 |23520761@gm.uit.edu.vn  |
-| 2      | 2352004    | Đinh Lê Bình An    |[BinhAnndapoet](https://github.com/BinhAnndapoet)     |2352004@gm.uit.edu.vn   |
+| 2      | 23520004    | Đinh Lê Bình An    |[BinhAnndapoet](https://github.com/BinhAnndapoet)     |2352004@gm.uit.edu.vn   |
 | 3      | 23520713    | Vũ Gia Khang      |           |23520713@gm.uit.edu.vn   |
 
 ## OUR PROJECT: LLMs Hallucination Classification on Vietnamese dataset 🕵️
