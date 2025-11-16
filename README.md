@@ -278,7 +278,7 @@ When running the full stack (Option 2), a FastAPI backend serves the models.
   {
     "status": "ok",
     "device": "cuda",
-    "gpu": "NVIDIA GeForce RTX 3080"
+    "gpu": "NVIDIA GeForce RTX 5070Ti"
   }
   ```
 
