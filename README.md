@@ -25,7 +25,7 @@
 | ------ |:-------------:| ----------------------:|-----------------------------------------------------:|-------------------------:
 | 1      | 23520761    | Bùi Nhật Anh Khôi     |[KhoiBui16](https://github.com/KhoiBui16)                 |23520761@gm.uit.edu.vn  |
 | 2      | 23520004    | Đinh Lê Bình An    |[BinhAnndapoet](https://github.com/BinhAnndapoet)     |2352004@gm.uit.edu.vn   |
-| 3      | 23520713    | Vũ Gia Khang      |           |23520713@gm.uit.edu.vn   |
+| 3      | 23520713    | Vũ Gia Khang      |[bayvai20kg](https://github.com/bayvai20kg)           |23520713@gm.uit.edu.vn   |
 
 ## OUR PROJECT: LLMs Hallucination Classification on Vietnamese dataset 🕵️
 This repository contains the final project for the CS221 - Natural Language Processing course, focusing on **LLMs Hallucination Classification on a Vietnamese dataset**. The primary objective is to develop a robust system to classify different types of language hallucinations (when an LLM generates factually incorrect or context-deviating information) in Vietnamese. To achieve this, we have fine-tuned and evaluated several **Masked LLM models** for their ability to verify and categorize a large language model's (LLM) response against a provided context.
