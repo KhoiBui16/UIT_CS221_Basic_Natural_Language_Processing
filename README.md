@@ -62,19 +62,19 @@ Go ahead and test the application live on Streamlit Cloud: [(https://uit-cs221-l
 
 * [Our Fine-Tuned Models (on Hugging Face)](#finetunemodelhf)
 
-* [Project Workflow](projectworkflow)
+* [Project Workflow](#projectworkflow)
 
-* [Project Structure](projectstructure)
+* [Project Structure](#projectstructure)
 
 * [How to Install](#howtoinstall)
 
-* [How to Run it Locally](howtorunitlocally)
+* [How to Run it Locally](#howtorunitlocally)
 
 * [Running Inference Directly (CLI)](#cli)
 
 * [API Endpoints (FastAPI)](#endpoint)
 
-* [Tech Stacks](techstacks)
+* [Tech Stacks](#techstacks)
 
 ## ✨ App Features
 <a name="appfeatures"></a>
