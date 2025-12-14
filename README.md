@@ -342,7 +342,7 @@ When running the full stack (Option 2), a FastAPI backend serves the models.
 
 * Streamlit
 
-* FastAP
+* FastAPI
 
 * Jupyter Notebook
 
