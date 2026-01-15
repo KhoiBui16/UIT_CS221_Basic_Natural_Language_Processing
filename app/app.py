@@ -66,9 +66,9 @@ st.info(
 # --- SIDEBAR ---
 st.sidebar.header("⚙️ Cấu hình Model")
 MODEL_OPTIONS = {
+    "☕ CafeBERT (Pure Vietnamese)": "KhoiBui/CafeBERT-hallucination-classification",
     "🏆 xlm-roberta-large(Recommended - 1)": "KhoiBui/xlm-roberta-large-hallucination-classification",
     "🤖 xlm-roberta-large-xnli (Recommended - 2)": "KhoiBui/xlm-roberta-large-xnli-hallucination-classification",
-    "☕ CafeBERT (Pure Vietnamese)": "KhoiBui/CafeBERT-hallucination-classification",
     "🌐 infoxlm-large (Multilingual)": "KhoiBui/infoxlm-large-hallucination-classification",
 }
 selected_label = st.sidebar.selectbox("Chọn mô hình:", list(MODEL_OPTIONS.keys()))
